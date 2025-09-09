@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CAF TV</title>
+
+  <!-- Refresh page every 30 minutes (1800 seconds) -->
+  <meta http-equiv="refresh" content="60">
+
+  <!-- Try to disable caching -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: #000;
+    }
+    iframe {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // Add a cache-buster parameter to force fresh reload
+    const ts = new Date().getTime();
+    const src = "https://docs.google.com/presentation/d/e/2PACX-1vT6Qp_OV5xPEBMfFkUMcnVu5WIZBtRCR_gH1snioFLujqvhiv26sJszLY5JIq8IZ7I6YCG1SL2gbqlN/embed?start=true&loop=true&delayms=15000&cb=" + ts;
+
+    document.write('<iframe src="' + src + '" allowfullscreen mozallowfullscreen webkitallowfullscreen></iframe>');
+  </script>
+</body>
+</html>
